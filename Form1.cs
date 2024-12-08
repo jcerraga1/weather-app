@@ -71,7 +71,8 @@ namespace WeatherApp
                 }
                 else
                 {
-                    MessageBox.Show("Place not found or API request failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    RemoveInfo();
+                    MessageBox.Show("Location not found or API request failed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -86,7 +87,7 @@ namespace WeatherApp
             }
             else
             {
-                picIcon.ImageLocation = @"C:\Users\janic\Desktop\a\WeatherApp\src\icons\default.png";
+                picIcon.ImageLocation = @"C:\Users\janic\Desktop\a\WeatherApp\src\icons\unknown.png";
             }
         }
 
@@ -98,6 +99,7 @@ namespace WeatherApp
 
             return localDateTime;
         }
+
         public void DisplaySunriseAndSunset(long sunrise, long sunset, long timezoneOffset)
         {
             // Convert UNIX timestamps for sunrise and sunset to local time
@@ -106,6 +108,18 @@ namespace WeatherApp
 
             lab_Sunrise.Text = localSunrise.ToString("hh:mm tt");
             lab_Sunset.Text = localSunset.ToString("hh:mm tt");
+        }
+
+        public void RemoveInfo()
+        {
+            lab_Condition.Text = "";
+            lab_Details.Text = "";
+            lab_Temp.Text = "";
+            lab_WindSpeed.Text = "";
+            lab_Pressure.Text = "";
+            lab_Sunrise.Text = "";
+            lab_Sunset.Text = "";
+            picIcon.ImageLocation = @"C:\Users\janic\Desktop\a\WeatherApp\src\icons\unknown.png";
         }
 
     }
