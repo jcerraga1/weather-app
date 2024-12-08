@@ -19,8 +19,8 @@ namespace WeatherApp
 
             // Set the FormBorderStyle to FixedDialog to make the window non-resizable
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;  // Optional: Prevent maximizing the window
-            this.MinimizeBox = true;   // Optional: Allow minimizing
+            this.MaximizeBox = false;  
+            this.MinimizeBox = true;   
         }
 
         private async void btn_Search_Click(object sender, EventArgs e)

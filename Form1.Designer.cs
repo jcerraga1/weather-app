@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tB_City = new System.Windows.Forms.TextBox();
             this.btn_Search = new System.Windows.Forms.Button();
             this.lab_Condition = new System.Windows.Forms.Label();
@@ -46,26 +47,38 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // tB_City
             // 
+            this.tB_City.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tB_City.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tB_City.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.tB_City.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB_City.Location = new System.Drawing.Point(103, 31);
+            this.tB_City.Location = new System.Drawing.Point(102, 38);
             this.tB_City.Name = "tB_City";
-            this.tB_City.Size = new System.Drawing.Size(146, 32);
+            this.tB_City.Size = new System.Drawing.Size(180, 25);
             this.tB_City.TabIndex = 0;
+            this.tB_City.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_Search
             // 
+            this.btn_Search.BackColor = System.Drawing.Color.LightGray;
+            this.btn_Search.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Search.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_Search.FlatAppearance.BorderSize = 0;
+            this.btn_Search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btn_Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.Location = new System.Drawing.Point(255, 28);
+            this.btn_Search.Location = new System.Drawing.Point(299, 32);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(122, 38);
             this.btn_Search.TabIndex = 1;
             this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.UseVisualStyleBackColor = false;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // lab_Condition
@@ -220,12 +233,21 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Pressure: ";
             // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(98, 63);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(180, 1);
+            this.label8.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(579, 450);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -244,8 +266,9 @@
             this.Controls.Add(this.lab_Condition);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.tB_City);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Weather";
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -272,6 +295,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 
