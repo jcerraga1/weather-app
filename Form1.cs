@@ -54,19 +54,19 @@ namespace WeatherApp
                 if (response.IsSuccessStatusCode)
                 {
                     var jsonResponse = await response.Content.ReadAsStringAsync();
-                    WeatherInfo.root weatherInfo = JsonConvert.DeserializeObject<WeatherInfo.root>(jsonResponse);
+                    WeatherInfo.Root weatherInfo = JsonConvert.DeserializeObject<WeatherInfo.Root>(jsonResponse);
                     
                     // Update UI with weather data
-                    lab_Condition.Text = weatherInfo.weather[0].main;
-                    string dtls = weatherInfo.weather[0].description;
+                    lab_Condition.Text = weatherInfo.weather[0].Main;
+                    string dtls = weatherInfo.weather[0].Description;
                     lab_Details.Text = char.ToUpper(dtls[0]) + dtls.Substring(1); 
-                    lab_Temp.Text = $"{Math.Round(weatherInfo.main.temp)}°C";
-                    lab_WindSpeed.Text = $"{weatherInfo.wind.speed} m/s";
-                    lab_Pressure.Text = $"{weatherInfo.main.pressure} hPa";
+                    lab_Temp.Text = $"{Math.Round(weatherInfo.main.Temp)}°C";
+                    lab_WindSpeed.Text = $"{weatherInfo.wind.Speed} m/s";
+                    lab_Pressure.Text = $"{weatherInfo.main.Pressure} hPa";
 
-                    DisplaySunriseAndSunset(weatherInfo.sys.sunrise, weatherInfo.sys.sunset, weatherInfo.timezone);
+                    DisplaySunriseAndSunset(weatherInfo.sys.Sunrise, weatherInfo.sys.Sunset, weatherInfo.Timezone);
 
-                    LoadWeatherIcon(weatherInfo.weather[0].icon);
+                    LoadWeatherIcon(weatherInfo.weather[0].Icon);
 
                 }
                 else

@@ -4,39 +4,38 @@ namespace WeatherApp
 {
     public class WeatherInfo
     {
-        public long timezone { get; set; }
-        public class root
+        public class Root
         {
-            public List<weather> weather { get; set; }
-            public main main { get; set; }
-            public wind wind { get; set; }
-            public sys sys { get; set; }
-            public long timezone { get; set; }
+            public List<Weather> weather { get; set; }
+            public Main main { get; set; }
+            public Wind wind { get; set; }
+            public Sys sys { get; set; }
+            public long Timezone { get; set; }
         }
 
-        public class weather
+        public class Weather
         {
-            public string main { get; set; }
-            public string description { get; set; }
-            public string icon { get; set; }
+            public string Main { get; set; }
+            public string Description { get; set; }
+            public string Icon { get; set; }
         }
 
-        public class main
+        public class Main
         {
-            public float temp { get; set; }
-            public int pressure { get; set; }
-            public int humidity { get; set; }
+            public float Temp { get; set; }
+            public int Pressure { get; set; }
+            public int Humidity { get; set; }
         }
 
-        public class wind
+        public class Wind
         {
-            public float speed { get; set; }
+            public float Speed { get; set; }
         }
 
-        public class sys
+        public class Sys
         {
-            public long sunrise { get; set; }
-            public long sunset { get; set; }
+            public long Sunrise { get; set; }
+            public long Sunset { get; set; }
         }
     }
 }
